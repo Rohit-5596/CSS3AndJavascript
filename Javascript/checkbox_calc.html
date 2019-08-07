@@ -1,0 +1,57 @@
+<html>
+<script language="javascript">
+    
+	
+   function doSearch()
+   {
+     
+	 var str="";
+	   if(document.getElementById("case1").checked)
+   {
+   var c1=document.getElementById("case1").value;
+   alert(c1);
+   str=str+" "+c1+"<br>";
+   }
+   if(document.getElementById("case2").checked)
+   {
+   var c2=document.getElementById("case2").value;
+   alert(c2);
+   str=str+" "+c2+"<br>";
+   }
+   if(document.getElementById("case3").checked)
+   {
+   var c3=document.getElementById("case3").value;
+   alert(c3);
+   str=str+" "+c3+"<br>";
+   }
+   document.write("You have selected <br><br><br>");
+   document.write(str);
+   }
+   
+   function clearForm()
+   {
+   frm1.reset();
+   }
+   </script>
+
+<head>
+<title>select one option</title>
+</head>
+<body>
+
+<h2>Product bill Calculation :</h2>
+ <hr> 
+<form name="frm1" method="post">	
+     <input type=checkbox id="1" value="">JAVA<br>
+     <input type=checkbox id="case2" value="lINUX OS">lINUX<br>
+	 <input type=checkbox id="case3" value="Oracle Database">Oracle<br>
+	 
+	 <br>
+	 <br>
+	 
+   <input type=button onClick=doSearch() value=Find name=btnFind >
+   <input type=button onClick=clearForm() value=Clear name=btnClear >
+    </i>
+	
+</body>
+</html>

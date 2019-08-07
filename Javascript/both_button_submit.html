@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>select state: </title>
+</head>
+
+<script>
+     function viewData()
+	 {
+	 //alert("error");
+	   anotherWindow =window.open("","","toolbar=no,status=no,width=500,height=500");
+	   //alert("error1");
+	   var name=document.getElementById("idName").value;
+     anotherWindow.document.write("<html><body><table border=1><tbody><tr><td>Name : <td>"+name+"</tr></tbody></table></body></html>");	
+   }
+   
+    function submitData()
+	 {
+	    //alert("error");
+	    var z=document.getElementById("state").value;
+		if(z.length=="0")
+		{
+		    alert("Select a state");
+			
+		}
+		
+		else
+		{
+		     anotherWindow =window.open("","","toolbar=no,status=no,width=500,height=500");
+			anotherWindow.document.write("<html><body><table border=1><thead><tr><th>State<th>Postal Code<th>Store location</tr></thead></body></html>");
+	
+             if(z=="M")		
+                 {
+				    anotherWindow.document.write("<tr><td>Maharastra</td><td>401</td><td>Mumbai</td></tr>");
+                  }	
+
+             else if(z=="G")		
+                 {
+				    anotherWindow.document.write("<tr><td>Goa</td><td>403</td><td>Panaji</td></tr>");
+                  }					  
+		}
+	 }
+	 
+ </script>
+<body>
+
+     <form onsubmit="submitData()">
+	      <table align="center" border="1">
+		  <tbody>
+		  <tr>
+		      <td><label>Name</label></td>
+			  <td><input type="text" id="idName" maxlength="20"</td>
+		  </tr>
+		  
+		  <tr>
+		      <td><label>State</label></td>
+			  <td><select id="state" required>
+			  <option value="M">Maharastra</option>
+			  <option value="G">Goa</option>
+			  </select>
+			  </td>
+		  </tr>
+		  
+		  <tr>
+			  <td><input type="submit" value="Submit">
+			  <td><input type="button" id="OK" value="Preview" onClick="viewData()"></td>
+		  </tr>
+	</tbody></table></form>
+</body>
+	
+
+   
+
+</html>

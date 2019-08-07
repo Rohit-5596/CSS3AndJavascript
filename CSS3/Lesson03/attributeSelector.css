@@ -1,0 +1,36 @@
+@CHARSET "ISO-8859-1";
+
+* {
+	font-family: calibri;
+	font-size: 30px;
+	color: blue;
+	background-color: grey;
+}
+
+[target] {
+	font-size: 20px;
+	background-color: green;
+}
+
+[target=_blank] {
+	font-size: 20px;
+	background-color: cyan;
+}
+
+[title~=last] {
+	font-size: 20px;
+	background-color: red;
+}
+
+[title$=div] {
+	font-size: 20px;
+	background-color: yellow;
+}
+
+/* ^(start) $(end) and *    */
+/*
+[title$="div"]
+{
+		background-color:lightgrey;
+}
+*/

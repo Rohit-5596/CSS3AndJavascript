@@ -1,0 +1,30 @@
+<html>
+<script language="javascript">
+    
+	
+   function Addition()
+   {
+   var add=0;
+	   
+   var c1=parseInt(document.getElementById("num1").value);
+   var c2=parseInt(document.getElementById("num2").value);
+   add= c1+c2;
+   document.write(add);
+   alert(add);
+  }
+   </script>
+
+<head>
+<title>select one option</title>
+</head>
+<body>
+
+     <form name="frm1">
+  Num1: <input type="text" id="num1" name="number1"><br>
+  Num2: <input type="text" id="num2" name="number2"><br>
+  <input type="button" value="Add" onClick="Addition()">
+</form>
+
+	
+</body>
+</html>
